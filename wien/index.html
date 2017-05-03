@@ -174,7 +174,7 @@
 		onEachFeature: function (feature, layer) {
 				var bike = '<h3>' + layer.feature.properties.STATION + '</h3>';
 				bike += '<p>' + layer.feature.properties.BEZIRK +'</p>';
-				layer.bindPopup(bike);
+				layer.bindTooltip(bike);
 		
 		
         }
@@ -245,7 +245,7 @@
 			"Luftbild 1956": layers.luftbild1956
         }, {
             "Stadtspaziergang Stationen": punkteSpaziergang,
-            "Citybike Standorte": punkteCitybike,
+            "Citybike Standorte": cluster_group,
             "Wandern in und um Wien": linienWanderwege,
 			"Märkte": maerkte
         }).addTo(map)

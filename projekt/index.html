@@ -92,8 +92,7 @@ L.control.scale({
 
 var hash = new L.Hash(map);
 
-//L.geoJSON(window.dordolla).addTo(map);
-L.geoJSON(window.grauzaria).addTo(map);
+
 
 var linienWanderwege = L.geoJSON(window.dordolla, {
            style: function(feature) {
@@ -114,7 +113,7 @@ var linienWanderwege = L.geoJSON(window.dordolla, {
        var cabin = L.marker([46.476825, 13.159995], {title: "Rifugio Grauzaria", icon : L.icon({iconUrl: 'icons/cabin.png'}) }).addTo(map);
 
 cabin.bindPopup('<p><a href= "https://www.dolomiten-friaul.de/rifugio/rifugio-grauzaria/" > Weitere Informationen </a></p>')
-
+L.control.mousePosition().addTo(map);
 </script>"
 </body>
 

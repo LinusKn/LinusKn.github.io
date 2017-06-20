@@ -19,7 +19,6 @@
      <script src="js/leaflet-mouseposition/L.Control.MousePosition.js"></script>
      <link rel="stylesheet" href="css/L.Control.MousePosition.css"/>
 
-     <script src= "data/udine.jpg"></script>
 
 
 
@@ -54,7 +53,12 @@
 
           <div id="map"></div>
           <div id="mapinfo">
-Die Folgenden Wanderwege stammen von Open Street Map und veranschaulichen das Potential für Wanderwege in der Gegend von Dordolla. Die Daten wurden mit Hilfe von Saga Gis in Geojson Files umgewandelt. Es ist zu erkennen das für diese Region viele Wanderwege möglich sind, die teilweise nicht vollständig Kartiert wurden. Diese Karte soll einen Überblick über die Möglichkeiten liefern und zu einer Begehung der Wege anregen, damit diese Besser verifiziert werden. Da bis jetzt kaum Schwierigkeitsangaben zu finden sind. Nur die Unterteilung in Path und Track ist bisher vorgenommen worden.
+Die Folgenden Wanderwege stammen von Open Street Map und veranschaulichen das Potential für Wanderwege in der Gegend von Dordolla. Die Daten wurden mit Hilfe von Saga Gis in Geojson Files umgewandelt. Es ist zu erkennen das für diese Region viele Wanderwege möglich sind, die teilweise nicht vollständig Kartiert wurden. Diese Karte soll einen Überblick über die Möglichkeiten liefern und zu einer Begehung der Wege anregen, damit diese Besser verifiziert werden. Da bis jetzt kaum Schwierigkeitsangaben zu finden sind. Nur die Unterteilung in Path und Track ist bisher vorgenommen worden. Die Beispielhafte Beschilderung stellt eine Möglichkeit für die Erschließung des Periphergebietes um Dordolla da.
+
+<figure>
+  <img src="data/schilder.png" alt="Beschilderung" width="400px"/>
+  <figcaption> Quelle: Eigene Darstellung.</figcaption>
+</figure>
 </div>
 
   </div>
@@ -98,7 +102,7 @@ var linienWanderwege = L.geoJSON(window.dordolla, {
            style: function(feature) {
                var farbe = "";
                if (feature.properties.type == "track") {
-                   farbe = "red";
+                   farbe = "blue";
                } else {
                    farbe = "orange";
                }
